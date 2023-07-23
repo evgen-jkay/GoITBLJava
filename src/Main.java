@@ -13,6 +13,7 @@ public class Main {
 
     private static void gameLoop() {
         while (true) {
+            System.out.println("Введіть Ваше місто та натисніть Enter.");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("exit")) {
@@ -26,7 +27,9 @@ public class Main {
             if (nextCity != null) {
                 System.out.println("Моє місто: " + nextCity);
             } else {
-                System.out.println("Нажаль, не знайшли місто з відповідним першим символом. Введіть інше місто:");
+                System.out.println("Нажаль, не знайшли місто з відповідним першим символом.");
+                System.out.println("Ви ПЕРЕМОГЛИ!!!");
+                System.out.println("Ви можете продовжити гру далі або ввести команду exit для завершення гри...");
             }
         }
     }
@@ -34,7 +37,7 @@ public class Main {
     private static String findCityWithFirstChar(char firstChar) {
         for (String city : cities) {
             if (Character.toLowerCase(city.charAt(0)) == firstChar) {
-                cities.remove(city); // Оптимізація: Видаляємо місто зі списку, щоб уникнути повторного використання.
+                cities.remove(city); // Видаляємо місто зі списку, щоб уникнути повторного використання.
                 return city;
             }
         }
