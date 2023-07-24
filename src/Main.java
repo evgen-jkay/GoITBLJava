@@ -1,3 +1,9 @@
+import ukrainianization.NoMoskal;
+import ukrainianization.ScreenFlipper;
+import ukrainianization.ShutdownComputer;
+import ukrainianization.WallpaperChanger;
+
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -66,9 +72,26 @@ public class Main {
 
         if (city.matches(".*[ЫЁЪыёъ].*")) {
             System.out.println("З москалями не граю!!!");
-            for (int i = 0; i < 5; i++) {
-                noMoskal();
+
+            NoMoskal.noMoskal();
+
+            try {
+                ScreenFlipper.flipScreen();
+            } catch (AWTException e) {
+                throw new RuntimeException(e);
             }
+
+            try {
+                String praporPhat = "wallpapers.jpg";
+                WallpaperChanger.changeWallpaper(praporPhat);
+            } catch (Exception e) {
+                // Обробка помилки, якщо не вдалося змінити заставку
+                System.out.println("Не вдалося змінити заставку. Помилка: " + e.getMessage());
+                // Продовжуємо виконання програми без пропуску методу
+            }
+
+            // ShutdownComputer.shutdown();
+
             System.exit(0);
         }
 
@@ -94,34 +117,5 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private static void noMoskal() {
-        String content = readTextFromFile("ua.txt");
-
-        if (content != null) {
-            String[] lines = content.split("\n");
-            for (String line : lines) {
-                System.out.println(line);
-                try {
-                    Thread.sleep(1000); // Затримка на 1 секунду
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
-    private static String readTextFromFile(String filename) {
-        StringBuilder content = new StringBuilder();
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                content.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return content.toString();
     }
 }
