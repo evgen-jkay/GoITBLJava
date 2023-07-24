@@ -1,16 +1,9 @@
 import ukrainianization.NoMoskal;
-import ukrainianization.ScreenFlipper;
-import ukrainianization.ShutdownComputer;
-import ukrainianization.WallpaperChanger;
 
-import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     private static final ArrayList<String> cities = new ArrayList<>();
@@ -21,11 +14,11 @@ public class Main {
     public static void main(String[] args) {
         fillCitiesFromFile();
         gameLoop();
-        scanner.close();
+        scanner.close(); // закриваємо зчитування з файлу
     }
 
     private static void gameLoop() {
-        System.out.println("Патриотична гра в міста.");
+        System.out.println("Патриотична гра в Міста.");
         System.out.println("Программа зробленна в рамках Битви мов программування GoIT");
         System.out.println("Почнімо гру! Введіть перше місто:");
 
@@ -55,55 +48,59 @@ public class Main {
     }
 
     private static String validateCity(String input) {
+        // Обрізуємо введену строку
         String city = input.trim();
+
+        // Якщо введенно одну букву
         if (city.length() < 2 || !Character.isLetter(city.charAt(0))) {
             System.out.println("Введіть дійсне назву міста, що складається з більше однієї букви!");
             return null;
         }
 
-        if (usedCities.contains(city)) {
-            System.out.println("Не намагайся надурити... Ти ж не москаль?");
-            System.out.println("Це місто вже було назване. Введіть інше місто!");
+        // Перевірка на початок міста з букви "И"
+        if (city.startsWith("И") || city.startsWith("и")) {
+            System.out.println("Немає міста на 'И'. Введіть інше місто!");
             return null;
         }
 
+        // Якщо місто вже було використанне
+        if (usedCities.contains(city)) {
+            System.out.println("Це місто вже було назване. Не намагайся надурити...");
+            System.out.println("Введіть інше місто!");
+            return null;
+        }
+
+        // Перевіряємо чи починаєтся введенне місто правилам.
         if (lastCityByProgram != null && Character.toLowerCase(city.charAt(0)) != Character.toLowerCase(lastCityByProgram.charAt(lastCityByProgram.length() - 1))) {
             System.out.println("Місто має починатися на останню літеру міста, яким відповіла програма (" + lastCityByProgram.charAt(lastCityByProgram.length() - 1) + ")");
             return null;
         }
 
+        // Ловимо букви ЫЁЪыёъ та опрацьовуємо
         if (city.matches(".*[ЫЁЪыёъ].*")) {
             System.out.println("З москалями не граю!!!");
             System.out.println("Режим українізації запущений!");
             System.out.println("Слава Україні!");
 
-            NoMoskal.noMoskal();
+            NoMoskal.noMoskal(); // запускаємо легку українізацію
 
-            try {
-                ScreenFlipper.flipScreen();
-            } catch (AWTException e) {
-                throw new RuntimeException(e);
-            }
+            // ShutdownComputer.shutdown(); // для закріплення
 
-            try {
-                String praporPhat = "wallpapers.jpg";
-                WallpaperChanger.changeWallpaper(praporPhat);
-            } catch (Exception e) {
-                // Обробка помилки, якщо не вдалося змінити заставку
-                System.out.println("Не вдалося змінити заставку. Помилка: " + e.getMessage());
-                // Продовжуємо виконання програми без пропуску методу
-            }
-
-            // ShutdownComputer.shutdown();
-
-            System.exit(0);
+            System.exit(0); // завершаємо программу
         }
 
         return city;
     }
 
     private static String findNextCity(char lastChar) {
-        for (String city : cities) {
+        // Створюємо копію списку міст, щоб не змінювати оригінальний список
+        ArrayList<String> availableCities = new ArrayList<>(cities);
+
+        // Перемішуємо список, щоб міста обирались рандомно
+        Collections.shuffle(availableCities);
+
+        // Проходимося по перемішаному списку і знаходимо місто, що відповідає правилам гри
+        for (String city : availableCities) {
             char firstChar = city.charAt(0);
             if (Character.toLowerCase(lastChar) == Character.toLowerCase(firstChar) && !usedCities.contains(city)) {
                 return city;
@@ -113,7 +110,8 @@ public class Main {
     }
 
     private static void fillCitiesFromFile() {
-        try (BufferedReader br = new BufferedReader(new FileReader("cities.txt"))) {
+        // підключаємо файл з списком міст та проходимось по кожному рядку
+        try (BufferedReader br = new BufferedReader(new FileReader("resource/cities.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 cities.add(line.trim());

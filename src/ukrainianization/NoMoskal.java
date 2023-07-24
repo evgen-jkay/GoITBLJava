@@ -4,9 +4,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Тут Підключаємо файл з Гімном України
+ * Зчитуємо кожну строку, та ввиводимо по строці в секунду
+ */
 public class NoMoskal {
     public static void noMoskal() {
-        String content = readTextFromFile("ua.txt");
+
+        String content = readTextFromFile("resource/ua.txt");
 
         if (content != null) {
             String[] lines = content.split("\n");

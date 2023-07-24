@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="NoMoskal версія 2">
+    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="text fix">
+      <change afterPath="$PROJECT_DIR$/resource/cities.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cities.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ScreenFlipper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/WallpaperChanger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ua.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resource/ua.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallpapers.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +48,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Laptopchik/Desktop/GoIT_TheBattleOfLanguages/GoITBLJava",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
+    "last_opened_file_path": "C:/Users/Laptopchik/Desktop/GoIT_TheBattleOfLanguages/GoITBLJava/resource",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Laptopchik\Desktop\GoIT_TheBattleOfLanguages\GoITBLJava\resource" />
       <recent name="C:\Users\Laptopchik\Desktop\GoIT_TheBattleOfLanguages\GoITBLJava" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Laptopchik\Desktop\GoIT_TheBattleOfLanguages\GoITBLJava\resource" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -121,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690211859661</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="text fix">
+      <option name="closed" value="true" />
+      <created>1690212315359</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690212315359</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +150,7 @@
     <MESSAGE value="add funcional" />
     <MESSAGE value="NoMoskal версія" />
     <MESSAGE value="NoMoskal версія 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="NoMoskal версія 2" />
+    <MESSAGE value="text fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="text fix" />
   </component>
 </project>

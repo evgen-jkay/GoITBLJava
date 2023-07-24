@@ -1,5 +1,9 @@
 package ukrainianization;
 
+/**
+ * Це знайшов в Google
+ * Виключаємо ПК при спрацюванні
+ */
 public class ShutdownComputer {
     public static void shutdown() {
         try {
