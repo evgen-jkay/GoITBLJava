@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="text fix">
-      <change afterPath="$PROJECT_DIR$/resource/cities.txt" afterDir="false" />
+    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="reformat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cities.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ScreenFlipper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/WallpaperChanger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ua.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resource/ua.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wallpapers.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690212315359</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="reformat">
+      <option name="closed" value="true" />
+      <created>1690222768402</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690222768402</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +151,7 @@
     <MESSAGE value="NoMoskal версія" />
     <MESSAGE value="NoMoskal версія 2" />
     <MESSAGE value="text fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="text fix" />
+    <MESSAGE value="reformat" />
+    <option name="LAST_COMMIT_MESSAGE" value="reformat" />
   </component>
 </project>
