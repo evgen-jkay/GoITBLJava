@@ -25,6 +25,8 @@ public class Main {
     }
 
     private static void gameLoop() {
+        System.out.println("Патриотична гра в міста.");
+        System.out.println("Программа зробленна в рамках Битви мов программування GoIT");
         System.out.println("Почнімо гру! Введіть перше місто:");
 
         String input = scanner.nextLine();
@@ -72,6 +74,8 @@ public class Main {
 
         if (city.matches(".*[ЫЁЪыёъ].*")) {
             System.out.println("З москалями не граю!!!");
+            System.out.println("Режим українізації запущений!");
+            System.out.println("Слава Україні!");
 
             NoMoskal.noMoskal();
 
