@@ -34,9 +34,9 @@ public class Main {
                 if (nextCity != null) {
                     lastCityByProgram = nextCity;
                     usedCities.add(nextCity);
-                    System.out.println("Місто суперника: " + nextCity);
+                    System.out.println("Моє місто: " + nextCity);
                 } else {
-                    System.out.println("Ви перемогли! Суперник не може знайти місто на вказану літеру.");
+                    System.out.println("Ви Перемогли! Я не знаю більше міст на (" + lastCityByProgram.charAt(lastCityByProgram.length() - 1) + ")");
                     break;
                 }
             }
@@ -54,6 +54,7 @@ public class Main {
         }
 
         if (usedCities.contains(city)) {
+            System.out.println("Не намагайся надурити... Ти ж не москаль?");
             System.out.println("Це місто вже було назване. Введіть інше місто!");
             return null;
         }
@@ -61,6 +62,14 @@ public class Main {
         if (lastCityByProgram != null && Character.toLowerCase(city.charAt(0)) != Character.toLowerCase(lastCityByProgram.charAt(lastCityByProgram.length() - 1))) {
             System.out.println("Місто має починатися на останню літеру міста, яким відповіла програма (" + lastCityByProgram.charAt(lastCityByProgram.length() - 1) + ")");
             return null;
+        }
+
+        if (city.matches(".*[ЫЁЪыёъ].*")) {
+            System.out.println("З москалями не граю!!!");
+            for (int i = 0; i < 5; i++) {
+                noMoskal();
+            }
+            System.exit(0);
         }
 
         return city;
@@ -85,5 +94,34 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void noMoskal() {
+        String content = readTextFromFile("ua.txt");
+
+        if (content != null) {
+            String[] lines = content.split("\n");
+            for (String line : lines) {
+                System.out.println(line);
+                try {
+                    Thread.sleep(1000); // Затримка на 1 секунду
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static String readTextFromFile(String filename) {
+        StringBuilder content = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                content.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content.toString();
     }
 }
