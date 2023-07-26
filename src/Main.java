@@ -58,10 +58,10 @@ public class Main {
         }
 
         // Перевірка на початок міста з букви "И"
-        if (city.startsWith("И") || city.startsWith("и")) {
-            System.out.println("Немає міста на 'И'. Введіть інше місто!");
-            return null;
-        }
+        //        if (city.startsWith("И") || city.startsWith("и")) {
+        //            System.out.println("Немає міста на 'И'. Введіть інше місто!");
+        //            return null;
+        //        }
 
         // Якщо місто вже було використанне
         if (usedCities.contains(city)) {
@@ -116,7 +116,9 @@ public class Main {
             while ((line = br.readLine()) != null) {
                 cities.add(line.trim());
             }
+            System.out.println("Завантаженно з бази " + cities.size() + " міста для гри...");
         } catch (IOException e) {
+            System.out.println("Помилка при підлючені бази міст: " + e.getMessage());
             e.printStackTrace();
         }
     }
