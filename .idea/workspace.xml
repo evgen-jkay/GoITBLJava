@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="gitignore ref">
+    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="bag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +36,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Laptopchik/Desktop/GoIT_TheBattleOfLanguages/GoITBLJava/resource&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last.edited.regexp": "Sample Text",
+    "last_opened_file_path": "C:/Users/Laptopchik/Desktop/GoIT_TheBattleOfLanguages/GoITBLJava/resource",
+    "settings.editor.selected.configurable": "project.scopes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Laptopchik\Desktop\GoIT_TheBattleOfLanguages\GoITBLJava\resource" />
@@ -174,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690232855541</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="bag">
+      <option name="closed" value="true" />
+      <created>1690360383586</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690360383586</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -186,6 +197,7 @@
     <MESSAGE value="reformat" />
     <MESSAGE value="README" />
     <MESSAGE value="gitignore ref" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore ref" />
+    <MESSAGE value="bag" />
+    <option name="LAST_COMMIT_MESSAGE" value="bag" />
   </component>
 </project>

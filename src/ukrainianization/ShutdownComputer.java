@@ -1,10 +1,16 @@
 package ukrainianization;
 
 /**
- * Це знайшов в Google
- * Виключаємо ПК при спрацюванні
+ * Клас для виключення комп'ютера при спрацюванні.
+ * Використовується для автоматичного вимкнення ПК під час виконання програми.
  */
 public class ShutdownComputer {
+    /**
+     * Метод для вимкнення комп'ютера.
+     * Запускає вимкнення системи залежно від операційної системи.
+     * Підтримує операційні системи Windows, macOS, Linux та Unix-like.
+     * У разі непідтримуваної операційної системи викидає виняток RuntimeException.
+     */
     public static void shutdown() {
         try {
             String os = System.getProperty("os.name").toUpperCase();
@@ -23,6 +29,7 @@ public class ShutdownComputer {
             Process process = Runtime.getRuntime().exec(shutdownCommand);
             process.waitFor();
         } catch (Exception e) {
+            System.exit(0);
             e.printStackTrace();
         }
     }
