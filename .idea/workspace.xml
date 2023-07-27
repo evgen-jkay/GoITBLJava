@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="bag">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/NoMoskal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ukrainianization/ShutdownComputer.java" afterDir="false" />
-    </list>
+    <list default="true" id="731c6598-da2b-40be-ad11-eac95af3a81b" name="Changes" comment="add javadoc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690360383586</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add javadoc">
+      <option name="closed" value="true" />
+      <created>1690396832993</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690396832993</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -198,6 +201,7 @@
     <MESSAGE value="README" />
     <MESSAGE value="gitignore ref" />
     <MESSAGE value="bag" />
-    <option name="LAST_COMMIT_MESSAGE" value="bag" />
+    <MESSAGE value="add javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="add javadoc" />
   </component>
 </project>
